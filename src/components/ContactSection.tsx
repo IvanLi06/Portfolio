@@ -14,9 +14,13 @@ export default function ContactSection() {
             building together.
           </h2>
 
-          <button className="mt-10 inline-flex items-center rounded-full bg-white px-6 py-3 text-sm font-medium text-black hover:bg-neutral-100">
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=ihl3321@g.rit.edu"
+            target="_blank"
+            rel="noopener noreferrer" 
+            className="mt-10 inline-flex items-center rounded-full bg-white px-6 py-3 text-sm font-medium text-black hover:bg-neutral-100">
             Get in touch <span className="ml-1 text-base">↗</span>
-          </button>
+          </a>
         </div>
 
         {/* Right: nav & socials */}
@@ -25,6 +29,11 @@ export default function ContactSection() {
             <p className="mb-3 text-xs text-neutral-400">Navigate</p>
             <ul className="space-y-2 text-neutral-200">
               <li>
+                <a href="#about-me" className="hover:text-white">
+                  About
+                </a>
+              </li>
+              <li>
                 <a href="#work" className="hover:text-white">
                   Work
                 </a>
@@ -32,11 +41,6 @@ export default function ContactSection() {
               <li>
                 <a href="#experience" className="hover:text-white">
                   Experience
-                </a>
-              </li>
-              <li>
-                <a href="#about-me" className="hover:text-white">
-                  About
                 </a>
               </li>
               <li>
@@ -51,17 +55,33 @@ export default function ContactSection() {
             <p className="mb-3 text-xs text-neutral-400">Social</p>
             <ul className="space-y-2 text-neutral-200">
               <li>
-                <a href="#" className="hover:text-white">
+                <a
+                  href="https://www.linkedin.com/in/ivanli-/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white"
+                >
                   LinkedIn ↗
                 </a>
               </li>
+
               <li>
-                <a href="#" className="hover:text-white">
+                <a
+                  href="https://github.com/IvanLi06"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white"
+                >
                   GitHub ↗
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white">
+                <a
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=ihl3321@g.rit.edu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white"
+                >
                   Email ↗
                 </a>
               </li>
