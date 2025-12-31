@@ -1,12 +1,12 @@
 const projects = [
   {
-    client: "Project In Progress...",
-    title: "Species Recognition and Activity ",
+    client: "In Progress...",
+    title: "Species Recognition And Activity Tracking Bird Box",
     image: `${import.meta.env.BASE_URL}.png`,
   },
   {
     client: "Brand Networks, an Augeo Company",
-    title: "Aimyads.ai - AI-powered media buying assistant",
+    title: "Aimyads.ai - AI-Powered Media Buying Assistant",
     image: `${import.meta.env.BASE_URL}images/AimyLogin.png`,
   },
   {
@@ -24,6 +24,11 @@ const projects = [
     title: "AWS Serverless Image Analyzer",
     image: `${import.meta.env.BASE_URL}images/AWS.png`,
   },
+  {
+    client: "Personal Project",
+    title: "Election Management System",
+    image: `${import.meta.env.BASE_URL}images/.png`,
+  },
 ];
 
 export default function ProjectsGrid() {
@@ -33,10 +38,10 @@ export default function ProjectsGrid() {
         <h2 className="pt-10 pb-6 text-[42px] font-semibold tracking-tight md:text-[52px]">
           Work
         </h2>
-        <div className="grid gap-5 md:grid-cols-3">
+        <div className="grid gap-5 md:grid-cols-2">
           {projects.map((p) => (
             <article key={p.title}>
-              <div className="rounded-[32px] border border-black p-6 md:p-6">
+              <div className="flex h-full flex-col rounded-[32px] border border-neutral-500 p-6">
                 <div className="relative flex aspect-[4/3] items-center justify-center rounded-2xl bg-neutral-900">
                   {p.image ? (
                     <img

@@ -1,6 +1,6 @@
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-20 bg-white/80 backdrop-blur border-b border-neutral-100">
+    <header className="sticky top-0 z-20 bg-white/80 backdrop-blur border-b border-neutral-300">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         {/* Name */}
         <div className="font-semibold tracking-tight">
