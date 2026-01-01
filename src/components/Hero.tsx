@@ -16,7 +16,7 @@ export default function Hero() {
         </p>
 
         <div className="mt-10 flex flex-wrap items-center gap-4">
-          <a href="#work"className="text-[20px] inline-flex items-center rounded-full bg-black px-6 py-3 font-medium text-white hover:bg-neutral-900">
+          <a href="#work"className="text-[20px] inline-flex items-center rounded-full bg-black px-6 py-3 font-medium text-white hover:bg-neutral-800">
             View my work <span className="ml-1 text-base">↗</span>
           </a>
           <span className="text-sm text-neutral-500">
