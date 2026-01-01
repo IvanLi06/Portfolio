@@ -9,9 +9,7 @@ export default function ContactSection() {
         <div className="max-w-xl">
           <p className="mb-6 text-xs text-neutral-400">Contact</p>
           <h2 className="text-4xl font-semibold leading-tight tracking-tight md:text-5xl">
-            Let&apos;s start
-            <br />
-            building together.
+            Let&apos;s connect!
           </h2>
 
           <a
