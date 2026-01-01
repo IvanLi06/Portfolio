@@ -41,7 +41,7 @@ export default function ProjectsGrid() {
         <div className="grid gap-5 md:grid-cols-2">
           {projects.map((p) => (
             <article key={p.title}>
-              <div className="flex h-full flex-col rounded-[32px] border border-neutral-500 p-6">
+              <div className="flex h-full flex-col rounded-[32px] border border-neutral-400 p-6">
                 <div className="relative flex aspect-[4/3] items-center justify-center rounded-2xl bg-neutral-900">
                   {p.image ? (
                     <img
