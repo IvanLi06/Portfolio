@@ -31,7 +31,7 @@ export default function Navbar() {
         <div className="flex items-center gap-3">
           {/* Resume button (desktop) */}
           <a
-            href={`${import.meta.env.BASE_URL}images/Ivan_Li_Resume.pdf`}
+            href={`${import.meta.env.BASE_URL}images/IvanLi_SWE_Resume.pdf`}
             target="_blank"
             rel="noopener noreferrer"
             className="hidden rounded-full bg-black px-4 py-1.5 text-base font-medium text-white hover:bg-neutral-800 md:inline-flex"
