@@ -34,7 +34,7 @@ export default function Navbar() {
             href={`${import.meta.env.BASE_URL}images/IvanLi_SWE_Resume.pdf`}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden rounded-full bg-black px-4 py-1.5 text-base font-medium text-white hover:bg-neutral-800 md:inline-flex"
+            className="hidden rounded-xl bg-black px-4 py-1.5 text-base font-medium text-white hover:bg-neutral-800 md:inline-flex"
           >
             View&nbsp;Resume
           </a>

@@ -16,9 +16,12 @@ export default function Hero() {
         </p>
 
         <div className="mt-10 flex flex-wrap items-center gap-4">
-          <a href="#work"className="text-[20px] inline-flex items-center rounded-full bg-black px-6 py-3 font-medium text-white hover:bg-neutral-800">
-            View my work <span className="ml-1 text-base">↗</span>
-          </a>
+        <a href="#work" className="text-[20px] inline-flex items-center rounded-2xl bg-black px-6 py-3 font-medium text-white hover:bg-neutral-800">
+          View my work 
+          <svg className="ml-1 h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M4 20L20 4M20 4h-8M20 4v8" />
+          </svg>
+        </a>
           <span className="text-sm text-neutral-500">
             React · Node.js · PostgreSQL · TypeScript · AWS · AI APIs/SDKs
           </span>
