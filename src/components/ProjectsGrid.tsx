@@ -55,7 +55,7 @@ export default function ProjectsGrid() {
                     </span>
                   )}
 
-                  <button className="border border-neutral-400 absolute bottom-4 left-4 flex h-10 w-10 items-center justify-center rounded-full bg-white text-lg shadow-sm transition-transform hover:scale-[1.20] hover:bg-neutral-100">
+                  <button className="border border-neutral-400 absolute bottom-4 left-4 flex h-10 w-10 items-center justify-center rounded-full bg-white text-lg shadow-sm transition-transform hover:scale-[1.10] hover:bg-neutral-100">
                   <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4 20L20 4M20 4h-8M20 4v8" />
                   </svg>
