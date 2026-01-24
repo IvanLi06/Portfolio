@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="bg-white">
+    <section className="bg-white animate-fadeIn">
       <div className="mx-auto max-w-6xl px-6 pt-16 pb-24 md:pb-14">
         <p className="mb-8 text-xs font-medium uppercase tracking-[0.25em] text-neutral-500">
           Full-Stack Software Engineer

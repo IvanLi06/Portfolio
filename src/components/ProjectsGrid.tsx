@@ -2,12 +2,13 @@ const projects = [
   {
     client: "In Progress...",
     title: "Species Recognition And Activity Tracking Bird Box",
-    image: `${import.meta.env.BASE_URL}images/WIP.jpg`,
+    image: null, 
+    isWIP: true, 
   },
   {
     client: "Brand Networks, an Augeo Company",
     title: "Aimyads.ai - AI-Powered Media Buying Assistant",
-    image: `${import.meta.env.BASE_URL}images/AimyDashboard.jpg`,
+    image: `${import.meta.env.BASE_URL}images/AimyColorfulDashboard2.png`,
   },
   {
     client: "Tiger Snack Box",
@@ -42,26 +43,39 @@ export default function ProjectsGrid() {
           {projects.map((p) => (
             <article key={p.title}>
               <div className="flex h-full flex-col rounded-[32px] border border-neutral-400 p-6">
-                <div className="relative flex aspect-[4/3] items-center justify-center rounded-2xl bg-neutral-900 border border-neutral-400">
-                  {p.image ? (
-                    <img
-                      src={p.image}
-                      alt={p.title}
-                      className="h-full w-full rounded-2xl object-cover"
-                    />
-                  ) : (
-                    <span className="text-xs text-neutral-400">
-                      {p.title} image
-                    </span>
-                  )}
+                <div className="relative flex aspect-[4/3] items-center justify-center rounded-2xl overflow-hidden">
+                  {p.isWIP ? (
+  <div className="absolute inset-0 bg-gradient-to-br from-indigo-200 to-purple-200">
+    <div className="shimmer-overlay" />
+    
+    <div className="relative z-10 flex h-full flex-col items-center justify-center px-8">
+      <div className="text-7xl mb-6">🚀</div>
+      <h3 className="text-3xl font-bold text-indigo-600 mb-6">In Development</h3>
+      
+      <div className="w-4/5 h-2 bg-indigo-300 rounded-full overflow-hidden">
+        <div className="progress-fill h-full bg-indigo-600 rounded-full" />
+      </div>
+    </div>
+  </div>
+) : p.image ? (
+  <img
+    src={p.image}
+    alt={p.title}
+    className="h-full w-full rounded-2xl object-cover"
+  />
+) : (
+  <span className="text-xs text-neutral-400">
+    {p.title} image
+  </span>
+)}
 
                   <button className="border border-neutral-400 absolute bottom-4 left-4 flex h-10 w-10 items-center justify-center rounded-full bg-white text-lg shadow-sm transition-transform hover:scale-[1.10] hover:bg-neutral-100">
-                  <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M4 20L20 4M20 4h-8M20 4v8" />
-                  </svg>
-                </button>
+                    <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M4 20L20 4M20 4h-8M20 4v8" />
+                    </svg>
+                  </button>
                 </div>
-                  <p className="mt-4 text-xs text-neutral-500">{p.client}</p>
+                <p className="mt-4 text-xs text-neutral-500">{p.client}</p>
                 <h3 className="mt-1 text-lg font-medium tracking-tight">
                   {p.title}
                 </h3>

@@ -1,6 +1,6 @@
 export default function AboutSection() {
   return (
-    <section id="about-me" className="bg-[#f5f5f5] py-20 md:py-24">
+    <section id="about-me" className="bg-[#f5f5f5] py-20 md:py-24 animate-fadeIn">
       <div className="mx-auto max-w-6xl px-6">
         <div className="rounded-[40px] bg-white px-8 py-10 shadow-sm md:px-12 md:py-12">
           {/* Make columns the same height */}
@@ -24,8 +24,8 @@ export default function AboutSection() {
               </h2>
 
               <p className="text-[15px] leading-relaxed text-neutral-700">
-                Ivan Li is a full-stack software engineer with a strong focus on
-                AI-driven product development, user-centered design, and scalable
+                Ivan is a full-stack software engineer with a strong focus on
+                AI-powered systems, user-centered design, and scalable
                 system architecture. He has built applications across SMB's,
                 MarketingTech, and enterprise teams, contributing to production-level
                 features using modern technologies such as Next.js, React,
