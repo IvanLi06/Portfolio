@@ -45,7 +45,7 @@ export default function ProjectsGrid() {
               <div className="flex h-full flex-col rounded-[32px] border border-neutral-400 p-6">
                 <div className="relative flex aspect-[4/3] items-center justify-center rounded-2xl overflow-hidden">
                   {p.isWIP ? (
-  <div className="absolute inset-0 bg-gradient-to-br from-indigo-200 to-purple-200">
+  <div className="absolute inset-0 bg-gradient-to-br from-indigo-100 to-purple-200">
     <div className="shimmer-overlay" />
     
     <div className="relative z-10 flex h-full flex-col items-center justify-center px-8">
