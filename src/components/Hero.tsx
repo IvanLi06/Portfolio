@@ -23,7 +23,7 @@ export default function Hero() {
           </svg>
         </a>
           <span className="text-sm text-neutral-500">
-            React · Next.js, Node.js · PostgreSQL · TypeScript · AWS · AI APIs/SDKs
+            React · Next.js · Node.js · PostgreSQL · TypeScript · AWS · AI APIs/SDKs
           </span>
         </div>
       </div>
