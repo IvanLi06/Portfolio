@@ -1,13 +1,12 @@
 const projects = [
   {
-    client: "In Progress...",
-    title: "Species Recognition And Activity Tracking Bird Box",
-    image: null, 
-    isWIP: true, 
+    client: "Genesee Land Trust Inc.",
+    title: "Computer Vision Wildlife Monitoring System",
+    image: `${import.meta.env.BASE_URL}images/BirdBoxDashboard.jpg`,
   },
   {
     client: "Brand Networks, an Augeo Company",
-    title: "Aimyads.ai - AI-Powered Media Buying Assistant",
+    title: "Aimyads.ai - AI Media Planning Platform",
     image: `${import.meta.env.BASE_URL}images/AimyColorfulDashboard2.png`,
   },
   {
@@ -17,18 +16,18 @@ const projects = [
   },
   {
     client: "Personal Project",
-    title: "Golang Dots And Boxes Multiplayer Game",
+    title: "Golang Real-Time Multiplayer Game",
     image: `${import.meta.env.BASE_URL}images/DotsAndBoxes.png`,
   },
   {
     client: "Personal Project",
-    title: "AWS Serverless Image Analyzer",
+    title: "Event-Driven Image Analysis Pipeline",
     image: `${import.meta.env.BASE_URL}images/AWS.png`,
   },
   {
     client: "Personal Project",
-    title: "Election Management System",
-    image: `${import.meta.env.BASE_URL}images/.png`,
+    title: "Multi-Tenant Election Management Platform",
+    image: `${import.meta.env.BASE_URL}images/img.png`,
   },
 ];
 
@@ -44,20 +43,7 @@ export default function ProjectsGrid() {
             <article key={p.title}>
               <div className="flex h-full flex-col rounded-[32px] border border-neutral-400 p-6">
                 <div className="relative flex aspect-[4/3] items-center justify-center rounded-2xl overflow-hidden">
-                  {p.isWIP ? (
-                    <div className="absolute inset-0 bg-gradient-to-br from-indigo-100 to-purple-200">
-                      <div className="shimmer-overlay" />
-                      
-                      <div className="relative z-10 flex h-full flex-col items-center justify-center px-8">
-                        <div className="text-7xl mb-6">🚀</div>
-                        <h3 className="text-3xl font-bold text-indigo-600 mb-6">In Development</h3>
-                        
-                        <div className="w-4/5 h-2 bg-indigo-300 rounded-full overflow-hidden">
-                          <div className="progress-fill h-full bg-indigo-600 rounded-full" />
-                        </div>
-                      </div>
-                    </div>
-                  ) : p.image ? (
+                  {p.image ? (
                     <img
                       src={p.image}
                       alt={p.title}
