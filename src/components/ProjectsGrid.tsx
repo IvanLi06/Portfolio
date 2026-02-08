@@ -20,6 +20,12 @@ const projects = [
     image: `${import.meta.env.BASE_URL}images/Pack.jpg`,
   },
   {
+    slug: "election-management-platform",
+    client: "Personal Project",
+    title: "Multi-Tenant Election Management Platform",
+    image: `${import.meta.env.BASE_URL}images/ElectionMember.jpg`,
+  },
+  {
     slug: "multiplayer-game-system",
     client: "Personal Project",
     title: "Concurrent Multiplayer Game System",
@@ -30,13 +36,7 @@ const projects = [
     client: "Personal Project",
     title: "Event-Driven Image Analysis Pipeline",
     image: `${import.meta.env.BASE_URL}images/AWS.png`,
-  },
-  {
-    slug: "election-management-platform",
-    client: "Personal Project",
-    title: "Multi-Tenant Election Management Platform",
-    image: `${import.meta.env.BASE_URL}images/ElectionMember.jpg`,
-  },
+  }
 ];
 
 export default function ProjectsGrid() {
