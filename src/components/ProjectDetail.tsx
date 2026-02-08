@@ -12,6 +12,10 @@ type ProjectContent = {
   challenges?: string[];
   impact?: string;
   liveDemo?: string;
+  systemDesign?: {
+    title: string;
+    images: { src: string; alt: string; caption?: string }[];
+  };
 };
 
 type ProjectContentMap = {
@@ -55,11 +59,32 @@ export default function ProjectDetail() {
         "Implemented weather-resistant hardware deployment in remote locations with limited connectivity",
         "Optimized image classification for low-power edge devices while maintaining ≥80% accuracy",
         "Designed cost-effective cloud storage strategy within $25/month budget constraint"
-      ]
+      ],
+      impact: "Enabled Genesee Land Trust staff to monitor wildlife activity 24/7 across multiple remote locations without manual observation, providing comprehensive data on species patterns and habitat usage to inform conservation efforts.",
+      systemDesign: {
+        title: "System Architecture & Design",
+        images: [
+          {
+            src: `${import.meta.env.BASE_URL}images/BirdBoxSystemArchitecture.jpg`,
+            alt: "System Architecture Diagram",
+            caption: "System Architecture"
+          },
+          {
+            src: `${import.meta.env.BASE_URL}images/BirdBoxDFD.jpg`,
+            alt: "Data Flow Diagram",
+            caption: "Data Flow Diagram"
+          },
+          {
+            src: `${import.meta.env.BASE_URL}images/BirdBoxER.jpg`,
+            alt: "Entity Relationship Diagram",
+            caption: "Database Schema"
+          }
+        ]
+      }
     },
     "ai-media-planning-platform": {
     context: "Brand Networks identified a critical gap in the digital advertising market: small and medium-sized businesses lacked access to sophisticated media planning tools that were only available to Fortune 100 companies. After 15 years of serving enterprise clients, they recognized the need to democratize media buying and make AI-powered advertising accessible to businesses of all sizes and budgets. The goal was to reduce overhead costs, eliminate the need for specialized media knowledge, and enable businesses to plan, execute, and optimize campaigns across multiple channels without hiring expensive agency teams.",
-    overview: "Create a conversational AI platform that enables businesses to plan, execute, and optimize paid media campaigns across all digital channels without requiring media expertise.",
+    overview: "Create a conversational AI platform that automates the process of planning, executing, and optimizing paid media campaigns across all digital channels without requiring media expertise.",
     role: "Software Engineer Intern",
     duration: "June 2025 - August 2025",
     technologies: [
@@ -247,6 +272,29 @@ export default function ProjectDetail() {
                 ))}
               </div>
             </section>
+
+            {/* System Design - only for Bird Box */}
+            {content.systemDesign && (
+              <section>
+                <h2 className="text-sm font-medium text-neutral-400 tracking-wider uppercase mb-6">
+                  {content.systemDesign.title}
+                </h2>
+                <div className="space-y-8">
+                  {content.systemDesign.images.map((image, index) => (
+                    <div key={index} className="space-y-3">
+                      <img 
+                        src={image.src} 
+                        alt={image.alt}
+                        className="w-full rounded-xl border border-neutral-200"
+                      />
+                      {image.caption && (
+                        <p className="text-sm text-neutral-500 text-center">{image.caption}</p>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </section>
+            )}
 
             {/* Key Features */}
             {content.keyFeatures && (
