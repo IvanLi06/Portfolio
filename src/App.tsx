@@ -6,6 +6,7 @@ import ProjectsGrid from './components/ProjectsGrid';
 import ContactSection from './components/ContactSection';
 import ProjectDetail from './components/ProjectDetail';
 import Navbar from './components/Navbar';
+import ScrollToTop from './components/ScrollToTop';
 
 function HomePage() {
   return (
@@ -23,6 +24,7 @@ function HomePage() {
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/work/:slug" element={<ProjectDetail />} />

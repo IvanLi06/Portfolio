@@ -47,7 +47,7 @@ export default function ProjectDetail() {
         "AWS S3"
       ],
       keyFeatures: [
-        "Implemented computer vision pipeline using OpenCV for species recognition with ≥80% accuracy",
+        "Implemented computer vision pipeline using OpenCV for species recognition with ≥90% accuracy",
         "Built RESTful APIs for real-time data synchronization between edge devices and web dashboard",
         "Designed event-driven architecture for processing nocturnal wildlife activity with night vision capability",
         "Architected 30-day rolling data retention system with automated daily uploads",
@@ -57,7 +57,7 @@ export default function ProjectDetail() {
       ],
       challenges: [
         "Implemented weather-resistant hardware deployment in remote locations with limited connectivity",
-        "Optimized image classification for low-power edge devices while maintaining ≥80% accuracy",
+        "Optimized image classification for low-power edge devices while maintaining ≥90% accuracy",
         "Designed cost-effective cloud storage strategy within $25/month budget constraint"
       ],
       impact: "Enabled Genesee Land Trust staff to monitor wildlife activity 24/7 across multiple remote locations without manual observation, providing comprehensive data on species patterns and habitat usage to inform conservation efforts.",
@@ -78,7 +78,27 @@ export default function ProjectDetail() {
             src: `${import.meta.env.BASE_URL}images/BirdBoxER.jpg`,
             alt: "Entity Relationship Diagram",
             caption: "Database Schema"
-          }
+          },
+          {
+            src: `${import.meta.env.BASE_URL}images/BirdBoxDashboard.jpg`,
+            alt: "Dashboard View",
+            caption: "Dashboard View"
+          },
+          {
+            src: `${import.meta.env.BASE_URL}images/BirdBoxGraphs.jpg`,
+            alt: "Graphs and Analytics",
+            caption: "Graphs and Analytics"
+          },
+          {
+            src: `${import.meta.env.BASE_URL}images/BirdBoxCalendar.jpg`,
+            alt: "Calendar View",
+            caption: "Calendar View"
+          },
+          {
+            src: `${import.meta.env.BASE_URL}images/BirdBoxList.jpg`,
+            alt: "List View",
+            caption: "List View"
+          },
         ]
       }
     },
@@ -142,20 +162,73 @@ export default function ProjectDetail() {
       liveDemo: "dotsandboxes.app"
     },
     "election-management-platform": {
-      overview: "Architected a scalable multi-tenant platform supporting 35,000+ users across organizational roles with customizable ballot management, reporting pipelines, and optimized database performance.",
+      context: "Professional societies struggled with fragmented voting systems lacking audit trails and unable to handle concurrent elections across organizational units. Organizations needed a centralized platform supporting thousands of members with real-time monitoring, vote integrity, and complex ballot structures including abstentions and write-in candidates.",
+      overview: "Architected a multi-tenant voting platform managing the complete election lifecycle—from ballot creation and voter management to real-time monitoring and results reporting—supporting 35,000+ users across organizational roles.",
+      role: "Full-Stack Developer",
       technologies: [
         "React",
-        "Node.js",
+        "Node.js/Express",
         "PostgreSQL",
-        "Sequelize",
-        "Swagger"
+        "Sequelize ORM",
+        "Swagger/OpenAPI"
       ],
+      systemDesign: {
+        title: "System Architecture & Design",
+        images: [
+          {
+            src: `${import.meta.env.BASE_URL}images/ElectionER.jpg`,
+            alt: "Entity Relationship Diagram",
+            caption: "Database Schema"
+          },
+          {
+            src: `${import.meta.env.BASE_URL}images/ElectionAPI.jpg`,
+            alt: "API Documentation",
+            caption: "RESTful API Endpoints"
+          },
+          {
+            src: `${import.meta.env.BASE_URL}images/ElectionMember2.jpg`,
+            alt: "Member Dashboard",
+            caption: "Member View - Active Ballots"
+          },
+          {
+            src: `${import.meta.env.BASE_URL}images/ElectionVoting.jpg`,
+            alt: "Voting Interface",
+            caption: "Ballot Voting Interface"
+          },
+          {
+            src: `${import.meta.env.BASE_URL}images/ElectionOfficer.jpg`,
+            alt: "Officer Dashboard",
+            caption: "Officer View - Election Status & Results"
+          },
+          {
+            src: `${import.meta.env.BASE_URL}images/ElectionManaging.jpg`,
+            alt: "Ballot Management",
+            caption: "Employee View - Ballot Management"
+          },
+          {
+            src: `${import.meta.env.BASE_URL}images/ElectionAdmin.jpg`,
+            alt: "Admin Dashboard",
+            caption: "Administrator View - System Management"
+          }
+        ]
+      },
       keyFeatures: [
-        "Architected scalable authorization system supporting 35,000+ users across multiple organizational roles",
-        "Developed RESTful services enabling customizable ballots, reporting pipelines, and election lifecycle management",
-        "Optimized database performance through indexing and sharding, reducing query latency under high load",
-        "Improved maintainability through Swagger API documentation and ORM-structured database access"
-      ]
+        "Architected role-based access control supporting four user types (Members, Officers, Employees, Administrators) with granular permissions across voting, ballot management, and system administration",
+        "Developed RESTful API with 30+ endpoints for election lifecycle management including ballot CRUD, vote recording, results aggregation, and audit logging",
+        "Implemented secure voting with abstention support, write-in candidates, and one-vote-per-user enforcement maintaining election integrity",
+        "Built real-time monitoring dashboards displaying voter participation rates, completion percentages, and vote breakdowns by candidate",
+        "Created multi-society architecture enabling cross-organization ballot management while maintaining strict data isolation",
+        "Designed comprehensive audit trail logging all ballot modifications, user actions, and vote timestamps for verification and compliance",
+        "Optimized database performance through strategic indexing, reducing ballot status lookup latency by 60% under concurrent load",
+        "Documented complete API using Swagger/OpenAPI with schema definitions for streamlined integration"
+      ],
+      challenges: [
+        "Designed transaction-safe voting preventing duplicate votes and race conditions using database constraints and row-level locking",
+        "Implemented complex ballot lifecycle state management (future, active, closed) with automated transitions based on start/end times",
+        "Architected multi-tenant data model supporting organization-specific ballots and permissions while ensuring data isolation",
+        "Balanced vote anonymity with audit requirements through separated vote recording and results aggregation"
+      ],
+      impact: "Enabled secure, transparent elections at scale with real-time participation visibility. Eliminated manual vote counting, reduced administration time by 75%, and provided comprehensive audit trails. Supporting 35,000+ members across multiple organizations with concurrent ballot management and instant results reporting."
     },
     "image-analysis-pipeline": {
       overview: "Developed a serverless event-driven pipeline that automatically analyzes uploaded images and generates AI-based structured metadata with fault-tolerant processing at scale.",
@@ -182,15 +255,17 @@ export default function ProjectDetail() {
     <div className="min-h-screen bg-white">
       {/* Hero section with image */}
       {project.image && (
-        <div className="relative h-[400px] md:h-[500px] overflow-hidden bg-neutral-50">
-          <img 
-            src={project.image} 
-            alt={project.title}
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white" />
-        </div>
-      )}
+  <div className="relative h-[400px] md:h-[500px] overflow-hidden bg-neutral-50">
+    <div className="mx-auto max-w-4xl h-full px-6">
+      <img 
+        src={project.image} 
+        alt={project.title}
+        className="w-full h-full object-cover rounded-b-3xl"
+      />
+    </div>
+    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white" />
+  </div>
+)}
 
       <div className="mx-auto max-w-4xl px-6 py-16 md:py-20">
         {/* Back button */}

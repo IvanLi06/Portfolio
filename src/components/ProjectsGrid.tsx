@@ -35,7 +35,7 @@ const projects = [
     slug: "election-management-platform",
     client: "Personal Project",
     title: "Multi-Tenant Election Management Platform",
-    image: `${import.meta.env.BASE_URL}images/.png`,
+    image: `${import.meta.env.BASE_URL}images/ElectionMember.jpg`,
   },
 ];
 
